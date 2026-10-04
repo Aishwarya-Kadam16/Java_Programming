@@ -1,2 +1,3 @@
-# Java_Programming
-"Programs &amp; Assignments for Logic Building Batch - Java"
+# Java Programming
+
+Java programming practice and classwork focused on building programming fundamentals, logic, and problem-solving skills.
