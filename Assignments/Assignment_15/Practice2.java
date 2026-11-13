@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+class Marvellous
+{
+    public int countOdd(int iNo)
+    {
+        int iDigit = 0,iCount = 0;
+
+        while(iNo != 0)
+        {
+            iDigit = iNo % 10;
+
+            if((iDigit % 2) == 1)
+            {
+                iCount++;
+            }
+            
+            iNo = iNo / 10;
+        }
+        return iCount;
+    }
+}
+class Practice2
+{
+    public static void main(String[] args) 
+    {
+        int iValue = 0,iRet = 0;
+
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter the number : ");
+        iValue = sobj.nextInt();
+
+        Marvellous mobj = new Marvellous();
+        iRet = mobj.countOdd(iValue);
+
+        System.out.println("The count of odd digits are : "+iRet);
+
+        mobj = null;
+        sobj = null;
+        System.gc();
+
+    }
+}
