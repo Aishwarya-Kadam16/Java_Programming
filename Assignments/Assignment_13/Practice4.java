@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class Marvellous
+{
+    public int sumNaturalNumbers(int iLimit)
+    {
+        int iCnt = 0, iSum = 0;
+
+        if(iLimit < 0)
+        {
+            return -1;
+        }
+
+        for(iCnt = 1;iCnt <= iLimit; iCnt++)
+        {
+            iSum = iSum + iCnt;
+        }
+
+        return iSum;
+    }
+}   //Time Complexity = O(N)
+class Practice4
+{
+    public static void main(String[] args) 
+    {
+        int iValue = 0,iRet = 0;
+
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter the number : ");
+        iValue = sobj.nextInt();
+
+        Marvellous mobj = new Marvellous();
+
+        iRet = mobj.sumNaturalNumbers(iValue);
+
+        System.out.println("The sum of natural numbers are : "+iRet);
+        mobj = null;
+        sobj = null;
+        System.gc();
+    }
+}
